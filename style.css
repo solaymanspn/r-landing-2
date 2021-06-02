@@ -1,0 +1,479 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+
+}
+
+.m-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f1f1;
+    display: flex;
+}
+
+.m-container .left {
+    flex: 40%;
+    position: relative;
+}
+
+.m-container .left .three-dot {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    pointer-events: none;
+    z-index: 1212;
+}
+
+.m-container .left .three-dot .dot {
+    width: 12px;
+    height: 12px;
+    background: #c4781b;
+}
+
+.m-container .left .text {
+    font-size: 200px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    line-height: 1;
+    font-size: 20vw;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 30px;
+}
+
+@media  (min-width: 1222px) {
+    .m-container .left .text {
+        font-size: 220px;
+    }
+}
+
+.m-container .left .model img {
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.m-container .left .model:before {
+    content: '';
+    display: block;
+    background: radial-gradient(rgba(0,0,0,0.4) 20%,
+                                 rgba(0,0,0,0.4) 30%,
+                                 rgba(0,0,0,0.1) 50%
+    );
+    width: 50%;
+    height: 90px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 85%;
+   left: 55%;
+   filter: blur(8px);
+   border-radius: 50%;
+}
+
+.m-container .right {
+    position: relative;
+    flex: 60%;
+    padding-right: 20PX;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.m-container .right .navbar {
+    width: 100%;
+}
+
+.m-container .right .navbar nav {
+    width: 100%;
+    height: 60px;
+}
+
+.m-container .right .navbar nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.m-container .right .navbar nav ul li.logo {}
+
+.m-container .right .navbar nav ul li.logo img {
+    width: 120px;
+}
+
+.m-container .right .navbar nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+}
+
+.m-container .right .navbar nav ul li a.links:hover {
+    color:  #c4781b;
+}
+
+.m-container .right .navbar nav ul li.three-dots-s {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+.m-container .right .navbar nav ul li.three-dots-s .dot-s {
+    width: 8px;
+    height: 8px;
+    background:  #c4781b;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.m-container .right .content-1 {
+    position: relative;
+}
+
+.m-container .right .content-1 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+}
+
+.m-container .right .content-1 h1 span.dot {
+    color: #c4781b;
+}
+
+.m-container .right .content-1 .cross {
+    position: absolute;
+    top: 30%;
+    right: 35%;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    transform: rotate(-20deg);
+}
+
+.m-container .right .content-2 {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.m-container .right .content-2 p {
+    font-family: 'Montserrat', sans-serif;
+   width: 330px;
+   font-weight: 100;
+   line-height: 1.4;
+   text-align: justify;
+}
+
+.m-container .right .content-2 .triangle {
+    position: absolute;
+    right: 20%;
+    top: 15%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.m-container .right .content-2 .triangle .tri {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 14px solid #111;
+}
+
+.m-container .right .content-2 .three-dots-s {
+    position: absolute;
+    right: 0;
+}
+
+.m-container .right .content-2 .three-dots-s .dot-s {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.m-container .right .content-3 {
+    
+}
+
+.m-container .right .content-3 form {
+    position: relative;
+
+}
+
+.m-container .right .content-3 form select {
+    width: 150px;
+    padding: 8px;
+    font-weight: 100;
+    border-radius: 10px;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.m-container .right .content-3 form .order {
+    background: #c4781b;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.m-container .right .content-3 form .order:hover {
+    background: transparent;
+    color: #c4781b;
+}
+
+.m-container .right .footer {
+    z-index: 111;
+}
+
+.m-container .right .footer a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.m-container .right .footer a:hover {
+    color: tomato;
+}
+
+.m-container .right .footer .social-icons {
+    display: flex;
+    margin-top: 10px;
+}
+
+.m-container .right .footer .social-icons .fab {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.m-container .right .footer .social-icons .fab:hover {
+    color: #c4781b;
+}
+
+.grids-cross-threedots {
+    width: 100%;
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    
+}
+
+.grids-cross-threedots .grids {
+    display: grid;
+    width: 150px;
+    height: 60px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+
+    position: absolute;
+    bottom: 0;
+    right: 45%; 
+}
+
+.grids-cross-threedots .grids .grd {
+    width: 4px;
+    height: 4px;
+    background: #000;
+    border-radius: 50%;
+}
+.grids-cross-threedots .cross {
+    position: absolute;
+    right: 30%;
+}
+
+.grids-cross-threedots .cross span {
+    color: #c4781b;
+    font-family:  'Lato', sans-serif;
+    font-size: 25px;
+    transform: rotate(20deg);
+   -ms-transform: rotate(20deg);
+   -webkit-transform: rotate(20deg);
+   display: inline-block;
+}
+
+.grids-cross-threedots .threedots {
+   position: absolute;
+   right: 20px;
+   top: 0;
+}
+
+.grids-cross-threedots .threedots .dot{
+    width: 8px;
+    height: 8px;
+    background:  #c4781b;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+
+/* Doing responsive for differents window */
+
+@media only screen and (max-width:1024px) {
+    .grids-cross-threedots .grids {
+        right: 18%;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .m-container .right .navbar {
+        display: none;
+    }
+
+    .m-container .right .content-1 h1 {
+        font-size: 55px;
+    }
+
+
+    .m-container .right .content-1 .cross {
+        top: 16%;
+        right: 18%
+    }
+
+    .m-container .right .content-2 p {
+        width: 230px;
+        font-size: 14px;
+    }
+
+    .m-container .right .content-2 .triangle {
+        right: 15%;
+    }
+
+    .m-container .right .content-2 .three-dots-s .dot-s, .grids-cross-threedots .threedots .dot {
+        width: 5px;
+        height: 5px;
+        margin-bottom: 10px;
+    }
+
+    .grids-cross-threedots .grids {
+        width: 135px;
+        height: 55px;
+        grid-gap: 0px
+    }
+
+    .m-container .left .text {
+        letter-spacing: 10px;
+    }
+
+    .m-container .left .three-dot {
+        width: 40px;
+        height: 40px;
+        grid-gap: 0;
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width:670px) {
+    .m-container {
+        min-height: 200vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+}
+
+
+
+/* Stylinge for hambergur */
+.hamburger {
+    width: 100%;
+    height: 100vh;
+    background: #f2f1f1;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 222;
+}
+
+.hamburger .logo {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    cursor: pointer;
+}
+
+.hamburger .logo img  {
+    width: 150px;
+}
+
+.hamburger .close {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.hamburger nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger nav ul {
+    list-style: none;
+    text-align: center;
+    font-size: 23px;
+}
+
+.hamburger nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.hamburger nav ul li a:hover {
+    color: #c4781b;
+}
+
+.show {
+    transform: translateX(0);
+}
